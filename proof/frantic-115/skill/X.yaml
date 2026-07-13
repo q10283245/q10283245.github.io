@@ -1,0 +1,27 @@
+skill: sourcey-publication-check
+version: "0.1.0"
+
+catalog:
+  kind: skill
+  audience: public
+  visibility: public
+  role: canonical
+
+runners:
+  default:
+    default: true
+    type: cli-tool
+    command: sh
+    args:
+      - ./run.sh
+    inputs:
+      public_url:
+        type: string
+        required: true
+      expected_sha256:
+        type: string
+        required: true
+      pr_url:
+        type: string
+        required: true
+

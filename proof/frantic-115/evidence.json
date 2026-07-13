@@ -1,0 +1,99 @@
+{
+  "schema": "frantic.evidence.v1",
+  "bounty": 115,
+  "summary": "Sourcey 3.6.5 reproducibly generated a live TySug llms.txt and seven linked Go reference targets from the real repository source. The output is published at a durable GitHub Pages URL, an upstream pull request is open against Dynom/TySug, and a signed runx validation receipt verifies the public check exited successfully.",
+  "runx_version": "runx-cli 0.7.0",
+  "project": {
+    "name": "TySug",
+    "repository": "https://github.com/Dynom/TySug",
+    "source_commit": "708d0917d75b114dded2e9fc9b485f988c6edf88",
+    "generation_revision": "104e64505a4666fccbbb1d6e658b2b7b2f5efe9d",
+    "upstream_pull_request": "https://github.com/Dynom/TySug/pull/25"
+  },
+  "generation": {
+    "tool": "Sourcey",
+    "version": "3.6.5",
+    "config": "https://raw.githubusercontent.com/q10283245/TySug/104e64505a4666fccbbb1d6e658b2b7b2f5efe9d/docs/sourcey/sourcey.config.ts",
+    "lockfile": "https://raw.githubusercontent.com/q10283245/TySug/104e64505a4666fccbbb1d6e658b2b7b2f5efe9d/docs/sourcey/pnpm-lock.yaml",
+    "command": "cd docs/sourcey && pnpm install --frozen-lockfile && pnpm build",
+    "output": "Sourcey built 7 pages; fix-base-path.mjs rewrote 118 navigation links; git diff --exit-code returned clean; regenerated llms.txt SHA-256 remained a1269aae0810f72b3c210ad8bf8470fa89837ab5f8381233fbf761f1bc4551aa."
+  },
+  "publication": {
+    "public_url": "https://q10283245.github.io/docs/reference/llms.txt",
+    "site_commit": "a7df836a7e1a7437bc0728784a1e1e21f896621a",
+    "llms_sha256": "a1269aae0810f72b3c210ad8bf8470fa89837ab5f8381233fbf761f1bc4551aa"
+  },
+  "observations": [
+    {
+      "id": "runx-cli-version",
+      "command": "runx --version",
+      "output": "runx-cli 0.7.0"
+    },
+    {
+      "id": "real-maintained-project",
+      "output": "Dynom/TySug is the existing upstream repository; the generated map covers six Go packages and the runnable web command from the pinned source tree."
+    },
+    {
+      "id": "pinned-source",
+      "output": "Upstream source commit 708d0917d75b114dded2e9fc9b485f988c6edf88; reproducible PR head 104e64505a4666fccbbb1d6e658b2b7b2f5efe9d."
+    },
+    {
+      "id": "sourcey-not-handwritten",
+      "output": "Sourcey 3.6.5 was run through the pinned package and lockfile; a clean rebuild reproduced the tracked output with no git diff and the same llms.txt digest."
+    },
+    {
+      "id": "public-llms",
+      "output": "HTTP 200 text/plain at https://q10283245.github.io/docs/reference/llms.txt with 608 bytes and SHA-256 a1269aae0810f72b3c210ad8bf8470fa89837ab5f8381233fbf761f1bc4551aa."
+    },
+    {
+      "id": "entry-audit-cmd-web",
+      "output": "https://q10283245.github.io/docs/reference/pkg-cmd-web.html returned HTTP 200 and title cmd/web - TySug."
+    },
+    {
+      "id": "entry-audit-finder",
+      "output": "https://q10283245.github.io/docs/reference/pkg-finder.html returned HTTP 200 and title finder - TySug."
+    },
+    {
+      "id": "entry-audit-internal-rwc",
+      "output": "https://q10283245.github.io/docs/reference/pkg-internal-rwc.html returned HTTP 200 and title internal/rwc - TySug."
+    },
+    {
+      "id": "entry-audit-keyboard",
+      "output": "https://q10283245.github.io/docs/reference/pkg-keyboard.html returned HTTP 200 and title keyboard - TySug."
+    },
+    {
+      "id": "entry-audit-server",
+      "output": "https://q10283245.github.io/docs/reference/pkg-server.html returned HTTP 200 and title server - TySug."
+    },
+    {
+      "id": "entry-audit-server-service",
+      "output": "https://q10283245.github.io/docs/reference/pkg-server-service.html returned HTTP 200 and title server/service - TySug."
+    },
+    {
+      "id": "entry-audit-index",
+      "output": "https://q10283245.github.io/docs/reference/ returned HTTP 200 and the generated TySug reference index."
+    },
+    {
+      "id": "upstream-adoption",
+      "output": "https://github.com/Dynom/TySug/pull/25 is open, mergeable, and adds the generated llms.txt plus the project-owned docs/reference link."
+    },
+    {
+      "id": "required-star",
+      "output": "The authenticated q10283245 GitHub session displayed sourcey/sourcey as Starred; Frantic performs the authoritative machine check."
+    },
+    {
+      "id": "governed-validation",
+      "output": "The runx harness fetched the live llms.txt, matched its digest, fetched all seven linked targets and the upstream PR, and sealed a signed process_closed receipt."
+    }
+  ],
+  "dogfood": {
+    "skill": "sourcey-publication-check",
+    "fixture": "proof/frantic-115/receipt-fixture.yaml",
+    "result": "sealed",
+    "checked_live_targets": 7,
+    "receipt_ref": "runx:receipt:sha256:256a2647abec04ed432b7731a43c0030f655b918ade258cf14710e54707cc3a7"
+  },
+  "receipt_ref": "runx:receipt:sha256:256a2647abec04ed432b7731a43c0030f655b918ade258cf14710e54707cc3a7",
+  "generated_at": "2026-07-14T00:15:44+08:00"
+}
+

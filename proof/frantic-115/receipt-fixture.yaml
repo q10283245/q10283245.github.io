@@ -1,0 +1,15 @@
+name: frantic-115-sourcey-publication
+kind: skill
+target: ./skill
+inputs:
+  public_url: https://q10283245.github.io/docs/reference/llms.txt
+  expected_sha256: a1269aae0810f72b3c210ad8bf8470fa89837ab5f8381233fbf761f1bc4551aa
+  pr_url: https://github.com/Dynom/TySug/pull/25
+expect:
+  status: sealed
+  receipt:
+    schema: runx.receipt.v1
+    state: sealed
+    disposition: closed
+    reason_code: process_closed
+

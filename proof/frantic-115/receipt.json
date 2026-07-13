@@ -1,0 +1,123 @@
+{
+  "acts": [
+    {
+      "artifact_refs": [],
+      "closure": {
+        "closed_at": "2026-05-18T00:00:00Z",
+        "disposition": "closed",
+        "reason_code": "process_exit",
+        "summary": "cli-tool exited successfully"
+      },
+      "criterion_bindings": [
+        {
+          "criterion_id": "process_exit",
+          "evidence_refs": [],
+          "status": "verified",
+          "summary": "cli-tool exited successfully",
+          "verification_refs": []
+        }
+      ],
+      "form": "observation",
+      "id": "act_sourcey-publication-check",
+      "intent": {
+        "constraints": [],
+        "derived_from": [],
+        "legitimacy": "Runtime graph execution was admitted by the local harness",
+        "purpose": "Run graph step sourcey-publication-check",
+        "success_criteria": [
+          {
+            "criterion_id": "process_exit",
+            "required": true,
+            "statement": "cli-tool exits successfully"
+          }
+        ]
+      },
+      "source_refs": [],
+      "summary": "Executed graph step sourcey-publication-check",
+      "target_refs": []
+    }
+  ],
+  "authority": {
+    "actor_ref": { "type": "principal", "uri": "runx:principal:local_runtime" },
+    "attenuation": { "parent_authority_ref": null, "subset_proof": null },
+    "authority_proof_refs": [],
+    "enforcement": {
+      "profile_hash": "sha256:635fdb0a7eef93911e3c6bd0b25b5e635edba32e0259133042b3a5f1fb19394e",
+      "redaction_refs": [],
+      "setup_refs": [],
+      "teardown_refs": []
+    },
+    "grant_refs": [],
+    "scope_refs": [],
+    "terms": []
+  },
+  "canonicalization": "runx.receipt.c14n.v1",
+  "created_at": "2026-05-18T00:00:00Z",
+  "decisions": [
+    {
+      "artifact_refs": [],
+      "choice": "open",
+      "closure": null,
+      "decision_id": "dec_sourcey-publication-check",
+      "inputs": {
+        "opportunity_refs": [],
+        "selection_ref": null,
+        "signal_refs": [],
+        "target_ref": null
+      },
+      "justification": { "evidence_refs": [], "summary": "runtime graph planner selected this node" },
+      "proposed_intent": {
+        "constraints": [],
+        "derived_from": [],
+        "legitimacy": "Local graph execution requested this node",
+        "purpose": "Open runtime node sourcey-publication-check",
+        "success_criteria": []
+      },
+      "selected_act_id": "act_sourcey-publication-check",
+      "selected_harness_ref": null
+    }
+  ],
+  "digest": "sha256:4b5523a9f5c995b1e924b06e4a4e8c6829ee4e2ab9c9487a8c942a09771c62f3",
+  "id": "sha256:256a2647abec04ed432b7731a43c0030f655b918ade258cf14710e54707cc3a7",
+  "idempotency": {
+    "content_hash": "sha256:frantic-115-sourcey-publication-sourcey-publication-check-content",
+    "intent_key": "sha256:frantic-115-sourcey-publication-sourcey-publication-check-intent",
+    "trigger_fingerprint": "sha256:frantic-115-sourcey-publication-sourcey-publication-check-trigger"
+  },
+  "issuer": {
+    "kid": "renewal-goal-q10283245-20260714",
+    "public_key_sha256": "sha256:b18464cb831836ff017f7360cc2813716b1247e8ead41d175788fe3e5e27d600",
+    "type": "hosted"
+  },
+  "lineage": { "children": [], "sync": [] },
+  "schema": "runx.receipt.v1",
+  "seal": {
+    "closed_at": "2026-05-18T00:00:00Z",
+    "criteria": [
+      {
+        "criterion_id": "process_exit",
+        "evidence_refs": [],
+        "status": "verified",
+        "summary": "cli-tool exited successfully",
+        "verification_refs": []
+      }
+    ],
+    "disposition": "closed",
+    "last_observed_at": "2026-05-18T00:00:00Z",
+    "reason_code": "process_closed",
+    "summary": "step sourcey-publication-check completed"
+  },
+  "signals": [],
+  "signature": {
+    "alg": "Ed25519",
+    "value": "base64:_FupY2yD0bfi965xP-BBoGnTsk7ObD_asHZRiFiFaRQo1ocmx4zDAIXCYTBnB7yCUxavq7vh6tsPpQMTOE30AQ"
+  },
+  "subject": {
+    "commitments": [],
+    "kind": "skill",
+    "ref": {
+      "type": "harness",
+      "uri": "hrn_frantic-115-sourcey-publication_sourcey-publication-check"
+    }
+  }
+}
