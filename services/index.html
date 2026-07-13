@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fast, proof-backed video, open-source documentation, and agent workflow delivery. Fixed scope, 48-hour turnaround, USDC accepted.">
+    <meta property="og:title" content="Fast, verifiable product delivery">
+    <meta property="og:description" content="Short-form product video, OSS documentation, and proof-backed automation delivered in 48 hours.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://q10283245.github.io/services/">
+    <title>Fast, verifiable product delivery</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #08110f;
+        --panel: #101c19;
+        --panel-2: #14231f;
+        --text: #f1f7f4;
+        --muted: #a9bbb4;
+        --line: #28423a;
+        --lime: #c7ff5e;
+        --mint: #57f2b0;
+        --max: 72rem;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 15% 0%, rgba(87, 242, 176, 0.13), transparent 31rem),
+          radial-gradient(circle at 85% 18%, rgba(199, 255, 94, 0.09), transparent 26rem),
+          var(--bg);
+        color: var(--text);
+        font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a { color: inherit; }
+
+      .wrap {
+        width: min(calc(100% - 2rem), var(--max));
+        margin-inline: auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1.25rem 0;
+      }
+
+      .mark {
+        color: var(--mint);
+        font: 700 0.82rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.14em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .status::before {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--lime);
+        box-shadow: 0 0 1rem rgba(199, 255, 94, 0.7);
+        content: "";
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
+        gap: 3rem;
+        align-items: end;
+        padding: 6rem 0 5rem;
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        color: var(--mint);
+        font: 700 0.82rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 13ch;
+        margin: 0;
+        font-size: clamp(3.2rem, 9vw, 7.2rem);
+        line-height: 0.91;
+        letter-spacing: -0.065em;
+      }
+
+      .lede {
+        max-width: 35rem;
+        margin: 1.6rem 0 0;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+      }
+
+      .hero-side {
+        border-left: 1px solid var(--line);
+        padding-left: 1.5rem;
+      }
+
+      .hero-side strong {
+        display: block;
+        color: var(--lime);
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+
+      .hero-side p { margin: 0.6rem 0 1.5rem; color: var(--muted); }
+
+      .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+      .button {
+        display: inline-flex;
+        min-height: 2.85rem;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--lime);
+        border-radius: 999px;
+        padding: 0.55rem 1rem;
+        background: var(--lime);
+        color: #07100d;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary { background: transparent; color: var(--text); border-color: var(--line); }
+
+      section { padding: 4.5rem 0; border-top: 1px solid var(--line); }
+
+      h2 {
+        margin: 0 0 2rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
+
+      .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+      .card {
+        display: flex;
+        min-height: 23rem;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        border-radius: 1.1rem;
+        padding: 1.4rem;
+        background: linear-gradient(145deg, rgba(20, 35, 31, 0.95), rgba(12, 24, 21, 0.95));
+      }
+
+      .card .num { color: var(--mint); font: 700 0.78rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .card h3 { margin: 2.5rem 0 0.75rem; font-size: 1.55rem; line-height: 1.1; }
+      .card p { margin: 0; color: var(--muted); }
+      .card ul { margin: 1.2rem 0 2rem; padding-left: 1.1rem; color: var(--muted); }
+      .price { margin-top: auto; color: var(--lime); font-size: 1.55rem; font-weight: 800; }
+      .price small { color: var(--muted); font-size: 0.8rem; font-weight: 500; }
+
+      .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+      .proof {
+        min-height: 12rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.25rem;
+        background: var(--panel);
+        text-decoration: none;
+        transition: transform 160ms ease, border-color 160ms ease;
+      }
+
+      .proof:hover { transform: translateY(-2px); border-color: var(--mint); }
+      .proof span { color: var(--mint); font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+      .proof h3 { margin: 1.1rem 0 0.55rem; font-size: 1.3rem; }
+      .proof p { margin: 0; color: var(--muted); }
+
+      .process { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; }
+      .process ol { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: steps; }
+      .process li { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem; border-top: 1px solid var(--line); padding: 1.1rem 0; color: var(--muted); counter-increment: steps; }
+      .process li::before { color: var(--lime); content: "0" counter(steps); font: 700 0.85rem/1.7 ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .process strong { color: var(--text); }
+
+      .wallets { margin-top: 1.5rem; display: grid; gap: 0.65rem; }
+      .wallet {
+        overflow-wrap: anywhere;
+        border: 1px solid var(--line);
+        border-radius: 0.75rem;
+        padding: 0.75rem;
+        background: #07100e;
+        color: var(--muted);
+        font: 0.78rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+      .wallet b { color: var(--mint); }
+
+      .cta { text-align: center; }
+      .cta h2 { max-width: 15ch; margin-inline: auto; }
+      .cta p { max-width: 38rem; margin: 0 auto 1.5rem; color: var(--muted); }
+
+      footer { display: flex; justify-content: space-between; gap: 1rem; padding: 2rem 0 3rem; color: var(--muted); font-size: 0.82rem; }
+
+      @media (max-width: 760px) {
+        .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 0; }
+        .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; }
+        .grid, .proof-grid, .process { grid-template-columns: 1fr; }
+        .card { min-height: 20rem; }
+        section { padding: 3.5rem 0; }
+        footer { flex-direction: column; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .proof { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="topbar">
+        <a class="mark" href="/services/">q10283245 / delivery desk</a>
+        <span class="status">Two July slots open</span>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <p class="eyebrow">Fixed scope · public proof · fast handoff</p>
+            <h1>Ship the thing this week.</h1>
+            <p class="lede">I turn supplied product assets and real source into launch-ready video, navigable documentation, and auditable agent workflows. Every engagement starts with a checkable acceptance list.</p>
+          </div>
+          <aside class="hero-side">
+            <strong>48h</strong>
+            <p>Standard first delivery for a tightly scoped package.</p>
+            <div class="actions">
+              <a class="button" href="https://t.me/wfsever">Brief me on Telegram</a>
+              <a class="button secondary" href="https://x.com/fwan32323">Message on X</a>
+            </div>
+          </aside>
+        </section>
+
+        <section aria-labelledby="packages-title">
+          <p class="eyebrow">Choose a package</p>
+          <h2 id="packages-title">Small enough to start now.</h2>
+          <div class="grid">
+            <article class="card">
+              <span class="num">01 / MOTION</span>
+              <h3>Short-form product video</h3>
+              <p>A sharp social cut made from assets you already own.</p>
+              <ul>
+                <li>20–45 seconds, vertical or square</li>
+                <li>Concept, captions, sound design</li>
+                <li>One focused revision</li>
+                <li>H.264 delivery plus source manifest</li>
+              </ul>
+              <div class="price">$120 USDC <small>/ fixed</small></div>
+            </article>
+
+            <article class="card">
+              <span class="num">02 / DOCS</span>
+              <h3>OSS reference launch</h3>
+              <p>Generated documentation that maintainers can reproduce and adopt.</p>
+              <ul>
+                <li>Pinned source and dependency versions</li>
+                <li>Searchable static reference</li>
+                <li>Public deployment and smoke checks</li>
+                <li>Maintainer-ready upstream PR</li>
+              </ul>
+              <div class="price">$180 USDC <small>/ fixed</small></div>
+            </article>
+
+            <article class="card">
+              <span class="num">03 / PROOF</span>
+              <h3>Agent workflow proof pack</h3>
+              <p>Turn an automation into something another operator can verify.</p>
+              <ul>
+                <li>Bounded workflow and test fixture</li>
+                <li>Machine-readable evidence</li>
+                <li>Signed execution receipt</li>
+                <li>Human review report</li>
+              </ul>
+              <div class="price">$150 USDC <small>/ fixed</small></div>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="proof-title">
+          <p class="eyebrow">Recent proof</p>
+          <h2 id="proof-title">Inspect the work, not the pitch.</h2>
+          <div class="proof-grid">
+            <a class="proof" href="https://x.com/fwan32323/status/2076693651611406458">
+              <span>Video · live post</span>
+              <h3>Usuals AI launch reel</h3>
+              <p>A 38-second vertical product story delivered from concept through final public H.264/AAC video.</p>
+            </a>
+            <a class="proof" href="https://x.com/fwan32323/status/2076682821184442727">
+              <span>Technical narrative · live thread</span>
+              <h3>Solana WorkReceipt walkthrough</h3>
+              <p>A ten-part founder-facing explanation that connects product architecture to a concrete adoption workflow.</p>
+            </a>
+            <a class="proof" href="https://github.com/Dynom/TySug/pull/25">
+              <span>Documentation · upstream PR</span>
+              <h3>TySug Go API reference</h3>
+              <p>Six packages generated from a pinned commit, with deterministic build tooling, navigation, search, and live checks.</p>
+            </a>
+            <a class="proof" href="https://github.com/q10283245/renewal-agency-case-trail">
+              <span>Automation · public evidence</span>
+              <h3>Agency case trail</h3>
+              <p>A governed multi-step workflow with machine-readable evidence, public source, and a sealed receipt trail.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="process" aria-labelledby="process-title">
+          <div>
+            <p class="eyebrow">Working agreement</p>
+            <h2 id="process-title">Clear before clever.</h2>
+            <p class="lede">No open-ended discovery bill. We agree on one outcome, one deadline, and the exact proof that closes the job.</p>
+          </div>
+          <div>
+            <ol>
+              <li><span><strong>Brief.</strong> Send the source, assets, deadline, and public destination.</span></li>
+              <li><span><strong>Scope.</strong> I reply with a short acceptance checklist and delivery time.</span></li>
+              <li><span><strong>Kickoff.</strong> 50% USDC starts work; the balance is due after the agreed proof passes.</span></li>
+              <li><span><strong>Handoff.</strong> You receive the artifact, source manifest, and verification notes.</span></li>
+            </ol>
+            <div class="wallets" aria-label="Accepted payment addresses">
+              <div class="wallet"><b>USDC on Base:</b> 0xF8Eb9Dd09c4fB8a725794a4693530aEc2b7Ff7b5</div>
+              <div class="wallet"><b>USDC on Solana:</b> AhV2E9HW5rdJM1r7mdoH4WXbWWeL8skgmJgCRzYG7Y1Q</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cta" aria-labelledby="cta-title">
+          <p class="eyebrow">Available now</p>
+          <h2 id="cta-title">Send one concrete problem.</h2>
+          <p>I will answer with a fixed package or tell you plainly when the scope does not fit. No security work, paid engagement schemes, gambling, or investment promotion.</p>
+          <div class="actions" style="justify-content: center">
+            <a class="button" href="https://t.me/wfsever">Start on Telegram</a>
+            <a class="button secondary" href="https://x.com/fwan32323">DM @fwan32323</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>© 2026 q10283245 · independent delivery desk</span>
+        <a href="/">Open-source documentation previews</a>
+      </footer>
+    </div>
+  </body>
+</html>
