@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fast, proof-backed product video, B2B/SaaS case studies, open-source documentation, and agent workflow delivery. Fixed scope, 48-hour first cut, USDC accepted.">
+    <meta name="description" content="Fast, proof-backed product video, B2B/SaaS case studies, open-source documentation, and agent workflow delivery. Fixed scope, 24-hour watermarked first cut for supplied-asset pilots, USDC accepted.">
     <meta property="og:title" content="Fast, verifiable product delivery">
-    <meta property="og:description" content="Product video, B2B/SaaS case studies, OSS documentation, and proof-backed automation with a 48-hour first cut.">
+    <meta property="og:description" content="Product video, B2B/SaaS case studies, OSS documentation, and proof-backed automation with a 24-hour watermarked first cut for supplied-asset pilots.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://q10283245.github.io/services/">
     <meta name="twitter:card" content="summary">
@@ -176,6 +176,31 @@
 
       .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
+      .reel {
+        display: grid;
+        grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
+        gap: 2rem;
+        align-items: center;
+        margin-bottom: 2rem;
+        border: 1px solid var(--line);
+        border-radius: 1.1rem;
+        padding: 1.25rem;
+        background: linear-gradient(145deg, rgba(20, 35, 31, 0.98), rgba(12, 24, 21, 0.98));
+      }
+
+      .reel video {
+        width: min(100%, 22rem);
+        max-height: 68vh;
+        justify-self: center;
+        border: 1px solid var(--line);
+        border-radius: 0.9rem;
+        background: #020605;
+      }
+
+      .reel-copy span { color: var(--mint); font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+      .reel-copy h3 { margin: 1rem 0 0.7rem; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.04em; }
+      .reel-copy p { max-width: 34rem; margin: 0 0 1.25rem; color: var(--muted); }
+
       .proof {
         min-height: 12rem;
         border: 1px solid var(--line);
@@ -218,7 +243,7 @@
       @media (max-width: 760px) {
         .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 0; }
         .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; }
-        .grid, .proof-grid, .process { grid-template-columns: 1fr; }
+        .grid, .proof-grid, .process, .reel { grid-template-columns: 1fr; }
         .card { min-height: 20rem; }
         section { padding: 3.5rem 0; }
         footer { flex-direction: column; }
@@ -245,8 +270,8 @@
             <p class="lede">I turn supplied product assets, interviews, and real source into launch-ready video, customer stories, navigable documentation, and auditable agent workflows. Every engagement starts with a checkable acceptance list.</p>
           </div>
           <aside class="hero-side">
-            <strong>48h</strong>
-            <p>Standard first delivery for a tightly scoped package.</p>
+            <strong>24h</strong>
+            <p>Watermarked first cut for a supplied-asset short-form pilot.</p>
             <div class="actions">
               <a class="button" href="https://t.me/wfsever">Brief me on Telegram</a>
               <a class="button secondary" href="mailto:qq10283245@gmail.com?subject=Paid%20delivery%20brief&amp;body=Project%3A%0ATarget%20platform%20and%20length%3A%0ADeadline%3A%0AAsset%20links%3A%0AReference%3A">Send a brief by email</a>
@@ -317,6 +342,18 @@
         <section aria-labelledby="proof-title">
           <p class="eyebrow">Recent proof</p>
           <h2 id="proof-title">Inspect the work, not the pitch.</h2>
+          <article class="reel">
+            <video controls playsinline preload="metadata" poster="./assets/edit-reel-2026-poster.jpg">
+              <source src="./assets/edit-reel-2026.mp4" type="video/mp4">
+              Your browser does not support embedded video. Open the MP4 below.
+            </video>
+            <div class="reel-copy">
+              <span>39 seconds · H.264/AAC · 9:16</span>
+              <h3>2026 edit reel</h3>
+              <p>Three original edits in one fast review: a brand story, an event reel, and a character trailer. Each source project remains linked below so buyers can inspect the full public post and its context.</p>
+              <a class="button secondary" href="./assets/edit-reel-2026.mp4">Open the reel MP4</a>
+            </div>
+          </article>
           <div class="proof-grid">
             <a class="proof" href="https://x.com/fwan32323/status/2076731326108197364">
               <span>Video · live post</span>
