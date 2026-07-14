@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Fast, proof-backed short-form batches, product video, B2B/SaaS case studies, open-source documentation, and agent workflow delivery. Fixed scope, watermarked first cut for supplied-asset pilots, USDC accepted.">
+    <meta name="description" content="Fixed-scope video editing for product launches, interviews, events, and social campaigns, plus proof-backed technical delivery. Watermarked first cut in 24 hours for supplied-asset pilots.">
     <meta property="og:title" content="Fast, verifiable product delivery">
-    <meta property="og:description" content="Product video, B2B/SaaS case studies, OSS documentation, and proof-backed automation with a 24-hour watermarked first cut for supplied-asset pilots.">
+    <meta property="og:description" content="Product launches, interview-to-social edits, event stories, captions, sound, delivery QA, and proof-backed technical work.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://q10283245.github.io/services/">
     <meta name="twitter:card" content="summary">
@@ -176,6 +176,41 @@
 
       .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 
+      .capability-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+      .capability {
+        min-height: 13rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 1.25rem;
+        background: var(--panel);
+      }
+
+      .capability span {
+        color: var(--mint);
+        font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .capability h3 { margin: 1rem 0 0.55rem; font-size: 1.25rem; }
+      .capability p { margin: 0; color: var(--muted); }
+
+      .format-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: 1.25rem;
+      }
+
+      .format-strip span {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.45rem 0.8rem;
+        color: var(--muted);
+        font: 700 0.76rem/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
       .reel {
         display: grid;
         grid-template-columns: minmax(15rem, 0.72fr) minmax(0, 1.28fr);
@@ -200,6 +235,9 @@
       .reel-copy span { color: var(--mint); font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
       .reel-copy h3 { margin: 1rem 0 0.7rem; font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1; letter-spacing: -0.04em; }
       .reel-copy p { max-width: 34rem; margin: 0 0 1.25rem; color: var(--muted); }
+
+      .reel.wide-video { grid-template-columns: minmax(0, 1.18fr) minmax(17rem, 0.82fr); }
+      .reel.wide-video video { width: 100%; max-height: 34rem; }
 
       .proof {
         min-height: 12rem;
@@ -243,7 +281,7 @@
       @media (max-width: 760px) {
         .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 0; }
         .hero-side { border-left: 0; border-top: 1px solid var(--line); padding: 1.5rem 0 0; }
-        .grid, .proof-grid, .process, .reel { grid-template-columns: 1fr; }
+        .grid, .proof-grid, .capability-grid, .process, .reel, .reel.wide-video { grid-template-columns: 1fr; }
         .card { min-height: 20rem; }
         section { padding: 3.5rem 0; }
         footer { flex-direction: column; }
@@ -265,9 +303,9 @@
       <main>
         <section class="hero">
           <div>
-            <p class="eyebrow">Fixed scope · public proof · fast handoff</p>
-            <h1>Ship the thing this week.</h1>
-            <p class="lede">I turn supplied product assets, interviews, and real source into launch-ready video, customer stories, navigable documentation, and auditable agent workflows. Every engagement starts with a checkable acceptance list.</p>
+            <p class="eyebrow">Video editing · product stories · technical delivery</p>
+            <h1>Make the idea land.</h1>
+            <p class="lede">I turn buyer-supplied product captures, interviews, event footage, and campaign assets into concise launch, sales, and social videos—with a clear story, readable captions, controlled sound, and delivery QA.</p>
           </div>
           <aside class="hero-side">
             <strong>24h</strong>
@@ -352,6 +390,52 @@
           </div>
         </section>
 
+        <section aria-labelledby="capabilities-title">
+          <p class="eyebrow">Editing capabilities</p>
+          <h2 id="capabilities-title">The useful parts, end to end.</h2>
+          <div class="capability-grid">
+            <article class="capability">
+              <span>Story</span>
+              <h3>Hook, structure, paper edit</h3>
+              <p>Find the strongest opening, reduce repetition, order the proof, and finish on one approved action.</p>
+            </article>
+            <article class="capability">
+              <span>Edit</span>
+              <h3>Pacing and reframing</h3>
+              <p>Clean cuts, punch-ins, B-roll timing, platform-safe crops, and deliberate 16:9, 9:16, or 1:1 framing.</p>
+            </article>
+            <article class="capability">
+              <span>Words</span>
+              <h3>Captions and callouts</h3>
+              <p>Burned-in captions, SRT delivery, hierarchy that survives mobile viewing, and restrained product callouts.</p>
+            </article>
+            <article class="capability">
+              <span>Sound</span>
+              <h3>Dialogue, music, and SFX</h3>
+              <p>Dialogue cleanup and leveling, one coherent music bed, purposeful effects, fades, and peak/loudness checks.</p>
+            </article>
+            <article class="capability">
+              <span>Product</span>
+              <h3>UI and launch storytelling</h3>
+              <p>Turn sanitized buyer-approved screen capture into a benefit-led flow without exposing customer data or credentials.</p>
+            </article>
+            <article class="capability">
+              <span>QA</span>
+              <h3>Delivery that opens cleanly</h3>
+              <p>H.264/AAC exports, web fast-start, full decoder checks, source manifests, checksums, and clear handoff notes.</p>
+            </article>
+          </div>
+          <div class="format-strip" aria-label="Supported deliverables">
+            <span>9:16 social</span>
+            <span>16:9 launch</span>
+            <span>1:1 campaign</span>
+            <span>burned captions</span>
+            <span>SRT captions</span>
+            <span>H.264 / AAC</span>
+            <span>source manifest</span>
+          </div>
+        </section>
+
         <section aria-labelledby="proof-title">
           <p class="eyebrow">Recent proof</p>
           <h2 id="proof-title">Inspect the work, not the pitch.</h2>
@@ -361,18 +445,25 @@
               Your browser does not support embedded video. Open the MP4 below.
             </video>
             <div class="reel-copy">
-              <span>39 seconds · H.264/AAC · 9:16</span>
-              <h3>2026 edit reel</h3>
-              <p>Three original edits in one fast review: a brand story, an event reel, and a character trailer. Each source project remains linked below so buyers can inspect the full public post and its context.</p>
+              <span>34 seconds · H.264/AAC · 9:16</span>
+              <h3>2026 business edit reel</h3>
+              <p>Four editing modes in one quick review: interview-to-social, concept storytelling, event narrative, and character trailer. The reel uses one consistent original music bed; all inherited source voice tracks are muted.</p>
               <a class="button secondary" href="./assets/edit-reel-2026.mp4">Open the reel MP4</a>
             </div>
           </article>
+          <article class="reel wide-video">
+            <video controls playsinline preload="metadata" poster="./assets/piers-sellers-interview-poster.jpg">
+              <source src="./assets/piers-sellers-interview-sample.mp4" type="video/mp4">
+              Your browser does not support embedded video. Open the MP4 below.
+            </video>
+            <div class="reel-copy">
+              <span>23 seconds · original interview audio · 9:16</span>
+              <h3>Interview-to-social sample</h3>
+              <p>An independent editing demonstration built from an official NASA Goddard interview and lunar B-roll: mobile-safe framing, burned captions, source credit, and a concise narrative arc. It is not client work and does not imply endorsement.</p>
+              <a class="button secondary" href="./assets/piers-sellers-interview-sample.mp4">Open the interview MP4</a>
+            </div>
+          </article>
           <div class="proof-grid">
-            <a class="proof" href="./assets/piers-sellers-interview-sample.mp4">
-              <span>Interview edit · independent sample</span>
-              <h3>NASA interview adaptation</h3>
-              <p>An independent 23-second editing sample adapting an official NASA Goddard 16:9 interview and lunar B-roll to 9:16, with captions, a mobile-safe layout, and source credit. No client or endorsement claim.</p>
-            </a>
             <a class="proof" href="https://x.com/fwan32323/status/2076731326108197364">
               <span>Video · live post</span>
               <h3>Goatfish Q2 cinematic reel</h3>
